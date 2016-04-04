@@ -14,7 +14,6 @@ class MyNavigationViewController: UINavigationController, UINavigationController
         super.viewDidLoad()
         if respondsToSelector(Selector("interactivePopGestureRecognizer")) {
             interactivePopGestureRecognizer?.delegate = self
-            
             delegate = self
         }
         // Do any additional setup after loading the view.
