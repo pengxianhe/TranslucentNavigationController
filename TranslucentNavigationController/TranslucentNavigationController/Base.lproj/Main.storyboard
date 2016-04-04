@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TranslucentNavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="1342" y="1242"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="cfc-D0-yfY">
             <objects>
-                <viewController id="Y4m-U7-UHO" sceneMemberID="viewController">
+                <viewController id="Y4m-U7-UHO" customClass="SecondViewController" customModule="TranslucentNavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tdj-zM-Iq7"/>
                         <viewControllerLayoutGuide type="bottom" id="Rjt-F1-ZKR"/>
@@ -46,8 +46,38 @@
                     <view key="view" contentMode="scaleToFill" id="EAE-e0-rga">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-Jo-UdK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgW-Cs-rZE">
+                                        <rect key="frame" x="0.0" y="20" width="80" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Tym-JB-xzY"/>
+                                        </constraints>
+                                        <state key="normal" image="nav_back"/>
+                                        <connections>
+                                            <action selector="back:" destination="Y4m-U7-UHO" eventType="touchUpInside" id="OY8-Tx-dND"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RgW-Cs-rZE" firstAttribute="leading" secondItem="UAr-Jo-UdK" secondAttribute="leading" id="7DG-nn-v2V"/>
+                                    <constraint firstItem="RgW-Cs-rZE" firstAttribute="top" secondItem="UAr-Jo-UdK" secondAttribute="top" constant="20" id="c0T-ak-Rmz"/>
+                                    <constraint firstAttribute="bottom" secondItem="RgW-Cs-rZE" secondAttribute="bottom" id="vHd-9m-Sws"/>
+                                    <constraint firstAttribute="height" constant="64" id="x60-YN-Qj1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36483828080000003" green="0.76470588240000004" blue="0.69055613029999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UAr-Jo-UdK" firstAttribute="top" secondItem="EAE-e0-rga" secondAttribute="top" id="t5V-Ky-IBU"/>
+                            <constraint firstAttribute="trailing" secondItem="UAr-Jo-UdK" secondAttribute="trailing" id="uKB-J0-l3o"/>
+                            <constraint firstItem="UAr-Jo-UdK" firstAttribute="leading" secondItem="EAE-e0-rga" secondAttribute="leading" id="utm-nL-CbO"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4e-Yk-VkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="-140" y="1033"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="p6V-V8-qTY">
             <objects>
-                <viewController id="iah-R1-IcG" sceneMemberID="viewController">
+                <viewController id="iah-R1-IcG" customClass="FirstViewController" customModule="TranslucentNavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tUO-KK-W8F"/>
                         <viewControllerLayoutGuide type="bottom" id="Yge-Pa-24s"/>
@@ -110,7 +140,7 @@
                     <view key="view" contentMode="scaleToFill" id="SjP-XE-TbO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCy-y3-ltk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,4 +186,7 @@
             <point key="canvasLocation" x="544" y="1242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nav_back" width="24" height="24"/>
+    </resources>
 </document>
