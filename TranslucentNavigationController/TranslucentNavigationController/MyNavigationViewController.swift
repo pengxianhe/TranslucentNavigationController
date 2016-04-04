@@ -8,28 +8,22 @@
 
 import UIKit
 
-class MyNavigationViewController: UINavigationController {
+class MyNavigationViewController: UINavigationController, UINavigationControllerDelegate,UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if respondsToSelector(Selector("interactivePopGestureRecognizer")) {
+            interactivePopGestureRecognizer?.delegate = self
+            
+            delegate = self
+        }
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func pushViewController(viewController: UIViewController, animated: Bool) {
+        if viewControllers.count >= 1 {
+            viewController.hidesBottomBarWhenPushed = true
+        }
+        super.pushViewController(viewController, animated: animated)
     }
-    */
-
 }

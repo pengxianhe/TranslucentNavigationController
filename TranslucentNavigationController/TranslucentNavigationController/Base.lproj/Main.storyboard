@@ -150,7 +150,7 @@
         <!--Item-->
         <scene sceneID="8Pq-9P-ddQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8aq-2y-yQM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8aq-2y-yQM" customClass="MyNavigationViewController" customModule="TranslucentNavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ey5-lx-bPk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x1f-3y-Ku2">
@@ -169,7 +169,7 @@
         <!--Item-->
         <scene sceneID="U0S-ey-tTC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I8Z-FK-Jge" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I8Z-FK-Jge" customClass="MyNavigationViewController" customModule="TranslucentNavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Jnm-Nd-MJO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7vS-Ns-LR9">
